@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio của tôi</title>
-    <!-- Nhúng thư viện icon FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* Cài đặt chung */
+        /* Cài đặt giao diện chuẩn, không phụ thuộc thư viện ngoài để tránh lỗi tải trang */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
         }
 
         html {
-            scroll-behavior: smooth; /* Tạo hiệu ứng cuộn mượt khi bấm nút */
+            scroll-behavior: smooth;
         }
 
         body {
@@ -26,12 +24,12 @@
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Thanh điều hướng Header */
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -48,3 +46,110 @@
             font-weight: 700;
             color: #58a6ff;
             text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 6px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+            border-color: #58a6ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 40px;
+            margin-top: 36px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #64b5f6 0%, #9575cd 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            color: #8b949e;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #238636;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #2ea043;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            margin-top: 48px;
+            padding-bottom: 60px;
+        }
+
+        .projects-section h2 {
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 24px;
+            cursor: pointer;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .project-
