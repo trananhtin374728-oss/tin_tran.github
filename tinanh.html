@@ -15,7 +15,7 @@
         }
 
         html {
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* Cuộn mượt khi bấm Xem Dự Án */
         }
 
         body {
@@ -30,7 +30,7 @@
             padding: 0 24px;
         }
 
-        /* Header */
+        /* Thanh điều hướng Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -66,7 +66,7 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Section */
+        /* Khu vực giới thiệu Hero */
         .hero {
             background-color: #161b22;
             border: 1px solid #30363d;
@@ -75,110 +75,3 @@
             margin-top: 36px;
             display: flex;
             align-items: center;
-            gap: 36px;
-        }
-
-        .avatar {
-            width: 115px;
-            height: 115px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #64b5f6 0%, #9575cd 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 38px;
-            font-weight: 700;
-            color: #ffffff;
-            flex-shrink: 0;
-            user-select: none;
-        }
-
-        .hero-content h1 {
-            font-size: 28px;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        .hero-content p {
-            color: #8b949e;
-            font-size: 15px;
-            margin-bottom: 22px;
-            max-width: 650px;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background-color: #238636;
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 15px;
-            text-decoration: none;
-            border: 1px solid rgba(240, 246, 252, 0.1);
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .btn-primary:hover {
-            background-color: #2ea043;
-        }
-
-        /* Projects Section */
-        .projects-section {
-            margin-top: 48px;
-            padding-bottom: 60px;
-        }
-
-        .projects-section h2 {
-            font-size: 22px;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .project-card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 24px;
-            cursor: pointer;
-            transition: border-color 0.2s, transform 0.2s;
-        }
-
-        .project-card:hover {
-            border-color: #58a6ff;
-            transform: translateY(-4px);
-        }
-
-        .project-card h3 {
-            color: #58a6ff;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #8b949e;
-            font-size: 14px;
-        }
-
-        /* Thẻ <dialog> quản lý bảng thông báo chuẩn, không lo lỗi màn hình đen */
-        dialog {
-            margin: auto;
-            background-color: #161b22;
-            color: #c9d1d9;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 28px;
-            max-width: 480px;
-            width: 90%;
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        dialog::backdrop {
-            background-color: rgba(13,
