@@ -1,77 +1,218 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio của tôi</title>
-    <!-- Nhúng thư viện icon FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Website của tôi</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth; /* Cuộn mượt khi bấm Xem Dự Án */
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
         }
 
-        .container {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Thanh điều hướng Header */
+        /* Thanh điều hướng */
         header {
+            background: #172554;
+            color: white;
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 0;
-            border-bottom: 1px solid #21262d;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            font-weight: 700;
-            color: #58a6ff;
+        header h2 {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: white;
             text-decoration: none;
+            margin-left: 20px;
         }
 
-        .social-links {
-            display: flex;
-            gap: 18px;
+        nav a:hover {
+            color: #60a5fa;
         }
 
-        .social-links a {
-            color: #8b949e;
-            font-size: 20px;
-            text-decoration: none;
-            transition: color 0.2s, transform 0.2s;
-        }
-
-        .social-links a:hover {
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        /* Khu vực giới thiệu Hero */
+        /* Trang chủ */
         .hero {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 40px;
-            margin-top: 36px;
+            min-height: 450px;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: white;
+            color: #1d4ed8;
+            padding: 13px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #bfdbfe;
+        }
+
+        /* Nội dung */
+        section {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #1e3a8a;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000012;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        /* Chân trang */
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>MY WEBSITE</h2>
+
+        <nav>
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#services">Dịch vụ</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h1>CHÀO MỪNG ĐẾN WEBSITE CỦA TÔI</h1>
+
+        <p>
+            Khám phá không gian website của riêng bạn.
+        </p>
+
+        <a href="#about" class="btn">Khám phá ngay</a>
+    </div>
+
+    <section id="about">
+        <h2>Giới thiệu</h2>
+
+        <p>
+            Đây là website cá nhân được xây dựng bằng HTML,
+            CSS và JavaScript. Website có giao diện đơn giản,
+            hiện đại và dễ dàng tùy chỉnh.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Nội dung nổi bật</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>Thiết kế</h3>
+                <p>Giao diện đẹp mắt, hiện đại và thân thiện.</p>
+            </div>
+
+            <div class="card">
+                <h3>Công nghệ</h3>
+                <p>Sử dụng HTML, CSS và JavaScript.</p>
+            </div>
+
+            <div class="card">
+                <h3>Miễn phí</h3>
+                <p>Đăng tải website miễn phí với GitHub Pages.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Liên hệ</h2>
+
+        <p>Email: yourname@gmail.com</p>
+
+        <br>
+
+        <a href="mailto:yourname@gmail.com" class="btn">
+            Gửi email
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
